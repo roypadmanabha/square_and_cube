@@ -1,87 +1,75 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Square and Cube Tables</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
-</head>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Square and Cube Tables</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600&display=swap">
-
-<style>
-*{
-  font-family: 'Mulish', sans-serif;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    background: #f0f8ff;
-}
-
-.container {
-    max-width: 800px;
-    margin: auto;
-}
-
-h1 {
-    text-align: center;
-}
-
-.tables {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap; /* Allows stacking on smaller screens */
-}
-
-.table-container {
-    flex: 1;
-    margin: 10px;
-    min-width: 300px; /* Minimum width for each table */
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-thead {
-    background-color: rgb(221, 7, 53);
-    color: white;
-}
-
-th, td {
-    padding: 10px;
-    text-align: center;
-    border: 1px solid #ddd;
-}
-
-@media (max-width: 600px) {
-    h1 {
-        font-size: 28px; /* Larger font for mobile */
-    }
-    h2 {
-        font-size: 24px; /* Larger heading for tables */
-    }
-    th, td {
-        font-size: 18px; /* Larger font size for table content */
-        padding: 15px; /* Increased padding for touch targets */
-  
-    }
-}
-</style>
-
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
-</head>
+    <style>
+        * {
+            font-family: 'Mulish', sans-serif;
+        }
 
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f0f8ff;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .tables {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap; /* Allows stacking on smaller screens */
+        }
+
+        .table-container {
+            flex: 1;
+            margin: 10px;
+            min-width: 300px; /* Minimum width for each table */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background-color: rgb(221, 7, 53);
+            color: white;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 28px; /* Larger font for mobile */
+            }
+            h2 {
+                font-size: 24px; /* Larger heading for tables */
+            }
+            th, td {
+                font-size: 18px; /* Larger font size for table content */
+                padding: 15px; /* Increased padding for touch targets */
+            }
+        }
+    </style>
+</head>
 <body>
     <div class="container">
         <h1>Square and Cube Tables</h1>
@@ -117,24 +105,23 @@ th, td {
         </div>
     </div>
 
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const squareTable = document.querySelector('.table-container:nth-child(1) tbody');
-    const cubeTable = document.querySelector('.table-container:nth-child(2) tbody');
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const squareTable = document.querySelector('.table-container:nth-child(1) tbody');
+            const cubeTable = document.querySelector('.table-container:nth-child(2) tbody');
 
-    // Generate square data
-    for (let i = 1; i <= 100; i++) {
-        const squareRow = <tr><td>${i}<sup>2</sup></td><td>${i * i}</td></tr>;
-        squareTable.insertAdjacentHTML('beforeend', squareRow);
-    }
+            // Generate square data
+            for (let i = 1; i <= 100; i++) {
+                const squareRow = `<tr><td>${i}</td><td>${i * i}</td></tr>`;
+                squareTable.insertAdjacentHTML('beforeend', squareRow);
+            }
 
-    // Generate cube data
-    for (let i = 1; i <= 100; i++) {
-        const cubeRow = <tr><td>${i}<sup>3</sup></td><td>${i * i * i}</td></tr>;
-        cubeTable.insertAdjacentHTML('beforeend', cubeRow);
-    }
-});
-</script>
-
+            // Generate cube data
+            for (let i = 1; i <= 100; i++) {
+                const cubeRow = `<tr><td>${i}</td><td>${i * i * i}</td></tr>`;
+                cubeTable.insertAdjacentHTML('beforeend', cubeRow);
+            }
+        });
+    </script>
 </body>
 </html>
